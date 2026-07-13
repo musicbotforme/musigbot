@@ -16,7 +16,7 @@ async def start(message: types.Message):
 @dp.message()
 async def get_audio(message: types.Message):
     await message.answer("Скачиваю...")
- ydl_opts = {
+    ydl_opts = {
             'format': 'bestaudio/best',
             'postprocessors': [{'key': 'FFmpegExtractAudio', 'preferredcodec': 'mp3'}],
             'outtmpl': 'music.mp3',
